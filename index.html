@@ -4,14 +4,27 @@
 <meta charset="UTF-8">
 <title>Prevención Activa | Consultoría en SST</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-.logo{
-  width:360px;
-  height:auto;
-  background:#ffffff;
-  padding:6px 10px;
-  border-radius:10px;
-  display:inline-block;
-  margin-bottom:16px;
+<style>
+:root{
+  --azul:#0b3c5d;
+  --gris:#f2f4f7;
+  --verde:#25d366;
+}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--gris);color:#222;}
+header{background:var(--azul);color:#fff;padding:40px 20px;text-align:center;}
+header h1{margin:0;font-size:34px;}
+header p{margin:10px 0 0;font-size:17px;}
+section{max-width:1100px;margin:auto;padding:40px 20px;}
+h2{color:var(--azul);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.card{background:#fff;padding:25px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,.08);}
+.destacado{background:#e8f1f7;border-left:6px solid var(--azul);}
+footer{background:#0b3c5d;color:#fff;text-align:center;padding:25px;}
+.whatsapp{
+ position:fixed;right:20px;bottom:20px;
+ background:var(--verde);color:#fff;
+ padding:15px 22px;border-radius:50px;
+ text-decoration:none;font-weight:bold;
 }
 </style>
 </head>
@@ -20,16 +33,17 @@
 
 <header>
 <img src="logo.png" alt="Prevención Activa" class="logo">
+<style>
 .logo{
-  width:360px;
-  height:auto;
-  background:#fff;
-  padding:6px 10px;
-  border-radius:10px;
-  display:inline-block;
-  margin-bottom:16px;
+  width: 360px;
+  height: auto;
+  background: #fff;
+  padding: 6px 10px;   /* antes estaba más grueso */
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 16px;
 }
-
+</style>
 <h1>PREVENCIÓN ACTIVA</h1>
 <p><strong>Reducimos riesgos, evitamos sanciones SUNAFIL y fortalecemos la cultura preventiva</strong></p>
 <p>Consultoría en Seguridad y Salud en el Trabajo – Ley 29783</p>
@@ -112,5 +126,3 @@ indicadores útiles y mejora continua.
 
 </body>
 </html>
-
-
