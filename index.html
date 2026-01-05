@@ -4,58 +4,27 @@
 <meta charset="UTF-8">
 <title>Prevención Activa | Consultoría en SST</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
-body{
-  font-family: Arial, sans-serif;
-  margin:0;
-  background:#f4f6f8;
-  color:#222;
+:root{
+  --azul:#0b3c5d;
+  --gris:#f2f4f7;
+  --verde:#25d366;
 }
-header{
-  background:#0b3c5d;
-  color:white;
-  padding:30px 20px;
-  text-align:center;
-}
-header h1{margin:0;font-size:32px;}
-header p{margin:10px 0 0;font-size:16px;}
-
-section{
-  max-width:1000px;
-  margin:auto;
-  padding:40px 20px;
-}
-h2{
-  color:#0b3c5d;
-}
-.servicios{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-.card{
-  background:white;
-  padding:20px;
-  border-radius:8px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-footer{
-  background:#0b3c5d;
-  color:white;
-  text-align:center;
-  padding:20px;
-}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--gris);color:#222;}
+header{background:var(--azul);color:#fff;padding:40px 20px;text-align:center;}
+header h1{margin:0;font-size:34px;}
+header p{margin:10px 0 0;font-size:17px;}
+section{max-width:1100px;margin:auto;padding:40px 20px;}
+h2{color:var(--azul);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.card{background:#fff;padding:25px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,.08);}
+.destacado{background:#e8f1f7;border-left:6px solid var(--azul);}
+footer{background:#0b3c5d;color:#fff;text-align:center;padding:25px;}
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:white;
-  padding:15px 20px;
-  border-radius:50px;
-  font-weight:bold;
-  text-decoration:none;
+ position:fixed;right:20px;bottom:20px;
+ background:var(--verde);color:#fff;
+ padding:15px 22px;border-radius:50px;
+ text-decoration:none;font-weight:bold;
 }
 </style>
 </head>
@@ -64,58 +33,66 @@ footer{
 
 <header>
 <h1>PREVENCIÓN ACTIVA</h1>
+<p><strong>Reducimos riesgos, evitamos sanciones SUNAFIL y fortalecemos la cultura preventiva</strong></p>
 <p>Consultoría en Seguridad y Salud en el Trabajo – Ley 29783</p>
 <p>Lic. Yvan Gallo Mendoza</p>
 </header>
 
+<section class="destacado">
+<h2>¿Por qué SUNAFIL sanciona a las empresas?</h2>
+<ul>
+<li>SGSST implementado solo en documentos, sin evidencia en campo</li>
+<li>IPERC desactualizado o no alineado a los riesgos reales</li>
+<li>Capacitaciones sin evaluación ni registros verificables</li>
+<li>Acciones correctivas registradas pero no cerradas</li>
+</ul>
+<p><strong>Prevención Activa trabaja estos puntos desde la raíz.</strong></p>
+</section>
+
 <section>
-<h2>¿Quiénes somos?</h2>
+<h2>Nuestro Enfoque Profesional</h2>
 <p>
-Prevención Activa es una consultoría especializada en Seguridad y Salud en el Trabajo,
-orientada a la implementación, actualización y mejora del SGSST conforme a la Ley 29783
-y su reglamento, con un enfoque práctico, preventivo y alineado a los criterios de SUNAFIL.
+No implementamos documentos para cumplir.  
+<strong>Implementamos controles para prevenir accidentes, enfermedades ocupacionales y sanciones.</strong>
+</p>
+<p>
+Alineamos el SGSST a la operación real del negocio, con verificación en campo,
+indicadores útiles y mejora continua.
 </p>
 </section>
 
 <section>
 <h2>Servicios de Consultoría en SST</h2>
-
-<div class="servicios">
+<div class="grid">
 
 <div class="card">
 <h3>Implementación y Actualización del SGSST</h3>
-<p>Diseño, actualización y mantenimiento del Sistema de Gestión de SST para el año 2026,
-con evidencias reales y cumplimiento normativo.</p>
+<p>Diseño, actualización y mantenimiento del SGSST 2026 conforme a la Ley 29783 y criterios SUNAFIL.</p>
 </div>
 
 <div class="card">
-<h3>IPERC y Control de Riesgos</h3>
-<p>Identificación de peligros, evaluación de riesgos y definición de controles según la jerarquía
-de control y los riesgos críticos del negocio.</p>
+<h3>IPERC y Control de Riesgos Críticos</h3>
+<p>Identificación de peligros, evaluación de riesgos y aplicación de la jerarquía de controles.</p>
 </div>
 
 <div class="card">
-<h3>Capacitaciones en SST</h3>
-<p>Capacitaciones efectivas alineadas a los riesgos reales del puesto de trabajo,
-con evaluación y evidencias verificables.</p>
+<h3>Auditorías Internas y Preparación SUNAFIL</h3>
+<p>Auditorías documentales y operativas con planes de acción claros y priorizados.</p>
 </div>
 
 <div class="card">
-<h3>Auditorías Internas y SUNAFIL</h3>
-<p>Auditorías internas del SGSST, verificación documental y preparación ante fiscalizaciones
-de SUNAFIL.</p>
+<h3>Capacitaciones Efectivas en SST</h3>
+<p>Capacitación con enfoque práctico, evaluación de aprendizaje y evidencia verificable.</p>
 </div>
 
 <div class="card">
 <h3>Investigación de Accidentes</h3>
-<p>Investigación de incidentes y accidentes de trabajo, análisis de causas y elaboración
-de planes de acción correctivos.</p>
+<p>Análisis de causas, lecciones aprendidas y seguimiento real de acciones correctivas.</p>
 </div>
 
 <div class="card">
 <h3>Salud Ocupacional y Ergonomía</h3>
-<p>Evaluación de puestos de trabajo, ergonomía, pausas activas y medidas preventivas
-en personal administrativo y operativo.</p>
+<p>Prevención de TME, ergonomía aplicada y vigilancia de la salud ocupacional.</p>
 </div>
 
 </div>
@@ -125,19 +102,15 @@ en personal administrativo y operativo.</p>
 <h2>Contacto</h2>
 <p><strong>WhatsApp:</strong> 943 893 037</p>
 <p><strong>Correo:</strong> ygallo48@hotmail.com | yvangallo20@gmail.com</p>
-<p><strong>Atención:</strong> Modalidad presencial y remota</p>
+<p><strong>Modalidad:</strong> Presencial y remota</p>
 </section>
 
 <footer>
-<p>© 2026 Prevención Activa – Lic. Yvan Gallo Mendoza</p>
+<p>© 2026 Prevención Activa – Consultoría en SST</p>
 <p>Seguridad • Prevención • Cumplimiento</p>
 </footer>
 
-<a class="whatsapp" 
-href="https://wa.me/51943893037" 
-target="_blank">
-WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/51943893037" target="_blank">WhatsApp</a>
 
 </body>
 </html>
