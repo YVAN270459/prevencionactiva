@@ -1,127 +1,168 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Prevención Activa | Consultoría en SST</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</style>
-body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--gris);color:#222;}
-header{background:var(--azul);color:#fff;padding:40px 20px;text-align:center;}
-header h1{margin:0;font-size:34px;}
-header p{margin:10px 0 0;font-size:17px;}
-section{max-width:1100px;margin:auto;padding:40px 20px;}
-h2{color:var(--azul);}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
-.card{background:#fff;padding:25px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,.08);}
-.destacado{background:#e8f1f7;border-left:6px solid var(--azul);}
-footer{background:#0b3c5d;color:#fff;text-align:center;padding:25px;}
-.whatsapp{
- position:fixed;right:20px;bottom:20px;
- background:var(--verde);color:#fff;
- padding:15px 22px;border-radius:50px;
- text-decoration:none;font-weight:bold;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prevención Activa | Consultoría en SST</title>
+
+  <style>
+    :root{
+      --azul:#0b3c5d;
+      --gris:#f2f4f7;
+      --verde:#25d366;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:0;
+      background:var(--gris);
+      color:#222;
+      line-height:1.5;
+    }
+
+    header{
+      background:var(--azul);
+      color:#fff;
+      padding:48px 20px 56px;
+      text-align:center;
+    }
+    .logo{
+      width:360px;
+      height:auto;
+      background:#fff;
+      padding:10px 14px;
+      border-radius:12px;
+      display:inline-block;
+      margin-bottom:16px;
+    }
+    header h1{
+      margin:0;
+      font-size:42px;
+      letter-spacing:1px;
+    }
+    header p{
+      margin:10px 0 0;
+      font-size:18px;
+    }
+
+    main{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px 40px;
+    }
+
+    .destacado{
+      background:#e8f1f7;
+      border-left:8px solid var(--azul);
+      border-radius:10px;
+      padding:26px;
+      margin-top:-28px;
+    }
+    .destacado h2{
+      margin:0 0 12px;
+      color:var(--azul);
+      font-size:28px;
+    }
+    .destacado ul{
+      margin:0 0 10px 20px;
+    }
+    .destacado p{
+      margin:12px 0 0;
+      font-weight:bold;
+    }
+
+    section{
+      margin-top:30px;
+      background:#fff;
+      padding:26px;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,.08);
+    }
+    section h2{
+      margin:0 0 10px;
+      color:var(--azul);
+      font-size:30px;
+    }
+
+    footer{
+      background:var(--azul);
+      color:#fff;
+      text-align:center;
+      padding:22px;
+      margin-top:30px;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      background:var(--verde);
+      color:#fff;
+      padding:14px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 10px 20px rgba(0,0,0,.15);
+    }
+
+    @media (max-width:480px){
+      .logo{ width:260px; }
+      header h1{ font-size:32px; }
+      header p{ font-size:16px; }
+      .destacado{ margin-top:-18px; padding:20px; }
+      section{ padding:20px; }
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <img src="logo.png" alt="Prevención Activa" class="logo" />
+    <h1>PREVENCIÓN ACTIVA</h1>
+    <p><strong>Reducimos riesgos, evitamos sanciones SUNAFIL y fortalecemos la cultura preventiva</strong></p>
+    <p>Consultoría en Seguridad y Salud en el Trabajo – Ley 29783</p>
+    <p>Lic. Yvan Gallo Mendoza</p>
+  </header>
 
-<header>
-<img src="logo.png" alt="Prevención Activa" class="logo">
-<style>
-.logo{
-  width: 360px;
-  height: auto;
-  background: #fff;
-  padding: 6px 10px;   /* antes estaba más grueso */
-  border-radius: 10px;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-</style>
-<h1>PREVENCIÓN ACTIVA</h1>
-<p><strong>Reducimos riesgos, evitamos sanciones SUNAFIL y fortalecemos la cultura preventiva</strong></p>
-<p>Consultoría en Seguridad y Salud en el Trabajo – Ley 29783</p>
-<p>Lic. Yvan Gallo Mendoza</p>
-</header>
+  <main>
+    <div class="destacado">
+      <h2>¿Por qué SUNAFIL sanciona a las empresas?</h2>
+      <ul>
+        <li>SGSST implementado solo en documentos, sin evidencia en campo</li>
+        <li>IPERC desactualizado o no alineado a los riesgos reales</li>
+        <li>Capacitaciones sin evaluación ni registros verificables</li>
+        <li>Acciones correctivas registradas pero no cerradas</li>
+      </ul>
+      <p>Prevención Activa trabaja estos puntos desde la raíz.</p>
+    </div>
 
-<section class="destacado">
-<h2>¿Por qué SUNAFIL sanciona a las empresas?</h2>
-<ul>
-<li>SGSST implementado solo en documentos, sin evidencia en campo</li>
-<li>IPERC desactualizado o no alineado a los riesgos reales</li>
-<li>Capacitaciones sin evaluación ni registros verificables</li>
-<li>Acciones correctivas registradas pero no cerradas</li>
-</ul>
-<p><strong>Prevención Activa trabaja estos puntos desde la raíz.</strong></p>
-</section>
+    <section>
+      <h2>Nuestro Enfoque Profesional</h2>
+      <p>No implementamos documentos para cumplir. <strong>Implementamos controles para prevenir accidentes, enfermedades ocupacionales y sanciones.</strong></p>
+      <p>Alineamos el SGSST a la operación real del negocio, con verificación en campo, indicadores útiles y mejora continua.</p>
+    </section>
 
-<section>
-<h2>Nuestro Enfoque Profesional</h2>
-<p>
-No implementamos documentos para cumplir.  
-<strong>Implementamos controles para prevenir accidentes, enfermedades ocupacionales y sanciones.</strong>
-</p>
-<p>
-Alineamos el SGSST a la operación real del negocio, con verificación en campo,
-indicadores útiles y mejora continua.
-</p>
-</section>
+    <section>
+      <h2>Servicios de Consultoría en SST</h2>
+      <h3>Implementación y Actualización del SGSST</h3>
+      <p>Diseño, actualización y mantenimiento del SGSST conforme a la Ley 29783 y criterios SUNAFIL.</p>
 
-<section>
-<h2>Servicios de Consultoría en SST</h2>
-<div class="grid">
+      <h3>IPERC y Control de Riesgos Críticos</h3>
+      <p>Identificación de peligros, evaluación de riesgos y aplicación de la jerarquía de controles.</p>
 
-<div class="card">
-<h3>Implementación y Actualización del SGSST</h3>
-<p>Diseño, actualización y mantenimiento del SGSST 2026 conforme a la Ley 29783 y criterios SUNAFIL.</p>
-</div>
+      <h3>Auditorías Internas y Preparación SUNAFIL</h3>
+      <p>Auditorías documentales y operativas con planes de acción claros y priorizados.</p>
+    </section>
+  </main>
 
-<div class="card">
-<h3>IPERC y Control de Riesgos Críticos</h3>
-<p>Identificación de peligros, evaluación de riesgos y aplicación de la jerarquía de controles.</p>
-</div>
+  <footer>
+    © <span id="y"></span> Prevención Activa – Consultoría en SST
+  </footer>
 
-<div class="card">
-<h3>Auditorías Internas y Preparación SUNAFIL</h3>
-<p>Auditorías documentales y operativas con planes de acción claros y priorizados.</p>
-</div>
+  <a class="whatsapp" href="https://wa.me/51943893037" target="_blank" rel="noopener">WhatsApp</a>
 
-<div class="card">
-<h3>Capacitaciones Efectivas en SST</h3>
-<p>Capacitación con enfoque práctico, evaluación de aprendizaje y evidencia verificable.</p>
-</div>
-
-<div class="card">
-<h3>Investigación de Accidentes</h3>
-<p>Análisis de causas, lecciones aprendidas y seguimiento real de acciones correctivas.</p>
-</div>
-
-<div class="card">
-<h3>Salud Ocupacional y Ergonomía</h3>
-<p>Prevención de TME, ergonomía aplicada y vigilancia de la salud ocupacional.</p>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2>Contacto</h2>
-<p><strong>WhatsApp:</strong> 943 893 037</p>
-<p><strong>Correo:</strong> ygallo48@hotmail.com | yvangallo20@gmail.com</p>
-<p><strong>Modalidad:</strong> Presencial y remota</p>
-</section>
-
-<footer>
-<p>© 2026 Prevención Activa – Consultoría en SST</p>
-<p>Seguridad • Prevención • Cumplimiento</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/51943893037" target="_blank">WhatsApp</a>
-
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
-
