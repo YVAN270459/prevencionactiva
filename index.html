@@ -96,6 +96,7 @@
       margin:10px 0 0 20px;
     }
     .destacado li{ margin:4px 0; }
+    .destacado p{ margin:12px 0 0; }
 
     /* GRID */
     .grid{
@@ -132,6 +133,66 @@
       color:#374151;
     }
 
+    /* CONTACTO (PUNTO 3) */
+    .contact-wrap{
+      background:linear-gradient(180deg, rgba(11,60,93,.08), rgba(11,60,93,0));
+      border-radius:14px;
+      padding:18px;
+      border:1px solid var(--borde);
+    }
+    .contact-card{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .contact-card .card{
+      height:100%;
+    }
+    .contact-title{
+      margin:0 0 8px;
+      color:var(--azul);
+      font-size:22px;
+    }
+    .contact-text{
+      margin:0 0 14px;
+      color:#374151;
+    }
+    .contact-list{
+      margin:0;
+      padding-left:18px;
+      color:#374151;
+    }
+    .btns{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:bold;
+      border:1px solid var(--borde);
+      background:#fff;
+      color:var(--azul);
+      box-shadow:0 8px 16px rgba(0,0,0,.06);
+    }
+    .btn:hover{ filter:brightness(.98); }
+    .btn-primary{
+      background:var(--verde);
+      color:#fff;
+      border-color:transparent;
+    }
+    .small{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:10px;
+      line-height:1.4;
+    }
+
     /* FOOTER */
     footer{
       background:var(--azul);
@@ -142,7 +203,7 @@
       border-radius:14px;
     }
 
-    /* WHATSAPP */
+    /* WHATSAPP FLOTANTE */
     .whatsapp{
       position:fixed;
       right:20px;
@@ -157,6 +218,9 @@
     }
 
     /* RESPONSIVE */
+    @media (max-width:820px){
+      .contact-card{ grid-template-columns:1fr; }
+    }
     @media (max-width:520px){
       header h1{ font-size:32px; }
       .logo{ width:280px; }
@@ -199,7 +263,7 @@
       </p>
     </section>
 
-    <!-- PUNTO 1: SERVICIOS (TARJETAS) -->
+    <!-- PUNTO 1: SERVICIOS -->
     <section>
       <h2>Servicios de Consultoría en SST</h2>
 
@@ -242,7 +306,7 @@
       </div>
     </section>
 
-    <!-- PUNTO 2: ¿POR QUÉ ELEGIR? (CONTINUACIÓN) -->
+    <!-- PUNTO 2: ¿POR QUÉ ELEGIR? -->
     <section>
       <h2>¿Por qué elegir Prevención Activa?</h2>
 
@@ -265,6 +329,57 @@
         <div class="card why">
           <h3>Prevención Real</h3>
           <p>Vamos más allá del papel: control de riesgos críticos y cultura preventiva sostenible.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUNTO 3: CONTACTO PROFESIONAL -->
+    <section id="contacto">
+      <div class="contact-wrap">
+        <h2>Contacto</h2>
+
+        <div class="contact-card">
+          <div class="card">
+            <p class="contact-title">Solicita un diagnóstico / cotización</p>
+            <p class="contact-text">
+              Escríbeme y te responderé con una propuesta clara, alineada a tu operación y a los criterios de fiscalización SUNAFIL.
+            </p>
+
+            <ul class="contact-list">
+              <li><strong>WhatsApp:</strong> +51 943 893 037</li>
+              <li><strong>Correo 1:</strong> ygallo48@hotmail.com</li>
+              <li><strong>Correo 2:</strong> yvangallo20@gmail.com</li>
+            </ul>
+
+            <div class="btns">
+              <a class="btn btn-primary" target="_blank" rel="noopener"
+                 href="https://wa.me/51943893037?text=Hola%20Lic.%20Yvan%20Gallo%20Mendoza,%20deseo%20una%20asesor%C3%ADa%20en%20SST%20para%20mi%20empresa.">
+                Escribir por WhatsApp
+              </a>
+
+              <a class="btn" href="mailto:ygallo48@hotmail.com?subject=Consulta%20SST%20-%20Prevenci%C3%B3n%20Activa&body=Hola%20Lic.%20Yvan%20Gallo%20Mendoza,%0D%0ADeseo%20informaci%C3%B3n%20sobre%20servicios%20de%20SST%20para%20mi%20empresa.%0D%0AGracias.">
+                Enviar correo
+              </a>
+            </div>
+
+            <div class="small">
+              Tip: si deseas que el botón de correo abra tu Gmail, asegúrate de tener Gmail como app predeterminada de correo en tu PC.
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="contact-title">¿Qué información enviar?</p>
+            <ul class="contact-list">
+              <li>Rubro (textil, construcción, minería, servicios, etc.)</li>
+              <li>Número de trabajadores</li>
+              <li>Ubicación (ciudad)</li>
+              <li>Necesidad principal (SGSST, IPERC, auditoría, capacitación, etc.)</li>
+              <li>Si hay visita SUNAFIL programada (sí/no)</li>
+            </ul>
+            <div class="small">
+              Con esos datos, la respuesta es más rápida y precisa.
+            </div>
+          </div>
         </div>
       </div>
     </section>
