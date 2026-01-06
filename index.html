@@ -2,20 +2,24 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YGM Consultoría en SST | Ley 29783</title>
 
   <style>
     :root{
-      --azul:#0f3f5a;
-      --azul2:#123f5b;
-      --gris:#f4f6f8;
+      --azul:#0c3f59;
+      --azul2:#0a344a;
+      --gris:#f3f6f9;
       --card:#ffffff;
-      --borde:#e7edf2;
-      --texto:#1f2a33;
-      --muted:#5a6b78;
-      --verde:#25D366;
-      --naranja:#f39c12;
+      --texto:#1a1f24;
+      --muted:#5b6b78;
+      --borde:#e7edf3;
+      --cielo:#e9f3fb;
+      --verde:#22c55e;
+      --naranja:#f59e0b;
+      --beige:#f7edcf;
+      --sombra:0 12px 30px rgba(12,63,89,.12);
+      --radius:18px;
     }
 
     *{box-sizing:border-box}
@@ -24,32 +28,36 @@
       font-family: Arial, Helvetica, sans-serif;
       background:var(--gris);
       color:var(--texto);
+      line-height:1.5;
     }
 
-    .wrap{max-width:1100px;margin:0 auto;padding:0 18px;}
-    .sp{height:26px}
-
-    /* ===== Header (Punto 1) ===== */
+    /* Header */
     header{
       background:var(--azul);
       color:#fff;
+      padding:42px 18px 58px;
       text-align:center;
-      padding:46px 18px 64px;
-      position:relative;
     }
-    .logoBox{
-      display:inline-block;
+    .logoWrap{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       background:#fff;
-      padding:14px 18px;
+      padding:12px 16px;
       border-radius:14px;
-      box-shadow:0 10px 28px rgba(0,0,0,.18);
-      margin-bottom:16px;
+      box-shadow:0 10px 22px rgba(0,0,0,.10);
     }
-    .logoBox img{height:64px;width:auto;display:block}
+    .logo{
+      width:340px;
+      max-width:78vw;
+      height:auto;
+      display:block;
+    }
     header h1{
-      margin:10px 0 6px;
+      margin:22px 0 6px;
       font-size:44px;
       letter-spacing:.5px;
+      font-weight:800;
     }
     header .sub{
       margin:0;
@@ -57,283 +65,339 @@
       opacity:.92;
       font-weight:600;
     }
-    header .line{
-      margin:12px 0 0;
-      font-size:17px;
+    header .sub2{
+      margin:8px 0 0;
+      font-size:15px;
+      opacity:.90;
+    }
+    header .sub3{
+      margin:10px 0 0;
+      font-size:15px;
       opacity:.95;
+      font-weight:700;
     }
 
-    /* Card grande “SUNAFIL sanciona…” */
+    /* Layout */
+    .container{
+      max-width:1120px;
+      margin:0 auto;
+      padding:0 18px 36px;
+    }
+
+    /* Card base */
+    .card{
+      background:var(--card);
+      border:1px solid var(--borde);
+      border-radius:var(--radius);
+      box-shadow:var(--sombra);
+    }
+
+    /* Punto 1: Destacado SUNAFIL */
     .destacado{
-      background:#eaf3f8;
-      border-left:6px solid var(--azul2);
-      border-radius:12px;
-      box-shadow:0 16px 30px rgba(0,0,0,.10);
-      padding:26px 28px;
-      margin:-42px auto 26px;
-      max-width:1100px;
+      background:var(--cielo);
+      border:1px solid #d8eaf8;
+      border-left:6px solid var(--azul);
+      border-radius:16px;
+      box-shadow:var(--sombra);
+      padding:26px 26px;
+      margin-top:-34px;
     }
     .destacado h2{
       margin:0 0 12px;
-      color:var(--azul2);
       font-size:28px;
+      color:var(--azul2);
+      font-weight:800;
     }
     .destacado ul{
-      margin:0 0 12px 18px;
-      color:#22303a;
-      line-height:1.45;
+      margin:0;
+      padding-left:20px;
     }
-    .destacado .bold{font-weight:700}
+    .destacado li{
+      margin:6px 0;
+      color:#23313b;
+    }
+    .destacado .nota{
+      margin:14px 0 0;
+      font-weight:800;
+      color:#16212a;
+    }
 
-    /* ===== Secciones ===== */
-    section{padding:0 0 10px}
-    .sectionCard{
-      background:var(--card);
-      border:1px solid var(--borde);
-      border-radius:14px;
-      padding:24px 26px;
-      box-shadow:0 12px 24px rgba(0,0,0,.06);
+    /* Secciones */
+    section{
+      margin-top:22px;
     }
-    .sectionTitle{
-      margin:0 0 10px;
-      font-size:30px;
+    h2.sectionTitle{
+      margin:0 0 14px;
       color:var(--azul2);
+      font-size:34px;
+      font-weight:900;
       letter-spacing:.2px;
     }
-    .p{
-      margin:0 0 10px;
-      line-height:1.55;
-      color:var(--texto);
-    }
-    .muted{color:var(--muted)}
 
-    /* ===== Punto 2: “¿Por qué elegir…?” ===== */
+    /* Punto 2: Enfoque Profesional */
+    .enfoque{
+      padding:26px 28px;
+    }
+    .enfoque p{
+      margin:10px 0 0;
+      color:#23313b;
+      font-size:15.5px;
+    }
+    .enfoque strong{
+      font-weight:900;
+    }
+
+    /* Punto 3: ¿Por qué elegir...? */
     .grid4{
       display:grid;
-      grid-template-columns:repeat(4, minmax(0,1fr));
+      grid-template-columns:repeat(4, minmax(220px, 1fr));
       gap:18px;
-      margin-top:14px;
     }
-    .miniCard{
+    .mini{
+      padding:18px 18px;
+      border-radius:16px;
       background:#fff;
       border:1px solid var(--borde);
-      border-radius:14px;
-      padding:18px 16px;
-      box-shadow:0 12px 24px rgba(0,0,0,.06);
+      box-shadow:var(--sombra);
       min-height:140px;
     }
-    .miniCard h4{
+    .mini h3{
       margin:0 0 8px;
-      color:var(--azul2);
       font-size:18px;
+      color:var(--azul2);
+      font-weight:900;
     }
-    .miniCard p{
+    .mini p{
       margin:0;
       color:var(--muted);
-      line-height:1.45;
       font-size:14.5px;
     }
 
-    /* ===== Punto 3(A): Servicios (formato “tarjetas grandes”) ===== */
-    .serviceList{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:18px;
-      margin-top:12px;
-    }
-    .serviceItem{
-      background:#fff;
-      border:1px solid var(--borde);
-      border-radius:14px;
-      padding:22px 22px;
-      box-shadow:0 12px 24px rgba(0,0,0,.06);
-    }
-    .serviceItem h3{
-      margin:0 0 8px;
-      font-size:24px;
-      color:#111;
-    }
-    .serviceItem p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.55;
-    }
-
-    /* ===== Punto 4: 3 columnas (Servicios adicionales / Sectores / Testimonios) ===== */
+    /* Punto 4: 3 columnas */
     .grid3{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
+      grid-template-columns:repeat(3, minmax(240px, 1fr));
       gap:18px;
-      margin-top:14px;
+      align-items:stretch;
     }
-    .panel{
-      background:#fff;
-      border:1px solid var(--borde);
-      border-radius:16px;
-      padding:18px 18px 16px;
-      box-shadow:0 12px 24px rgba(0,0,0,.06);
+    .colCard{
+      padding:18px 18px;
     }
-    .panelHead{
+    .colHead{
       display:flex;
       align-items:center;
       gap:12px;
       margin-bottom:10px;
     }
-    .icon{
-      width:46px;height:46px;border-radius:12px;
-      display:grid;place-items:center;
-      background:#f2f6f9;
+    .badge{
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#eef3f7;
       border:1px solid var(--borde);
-      font-size:22px;
+      font-size:18px;
     }
-    .panel h3{
+    .colCard h3{
       margin:0;
-      font-size:22px;
+      font-size:18px;
       color:var(--azul2);
+      font-weight:900;
     }
     .underline{
+      width:56px;
       height:3px;
-      width:120px;
       background:var(--naranja);
-      border-radius:999px;
-      margin:8px 0 14px;
+      border-radius:99px;
+      margin:10px 0 14px;
     }
-    .checklist, .sectorList, .quotes{
+    .checklist{
       margin:0;
-      padding-left:0;
+      padding:0;
       list-style:none;
     }
-    .checklist li, .sectorList li, .quotes li{
+    .checklist li{
       display:flex;
       gap:10px;
-      padding:8px 0;
-      color:var(--texto);
-      line-height:1.45;
-      border-bottom:1px dashed #eef3f7;
+      padding:9px 0;
+      border-bottom:1px dashed #e8eef5;
+      color:#23313b;
+      font-size:14.5px;
     }
-    .checklist li:last-child,
-    .sectorList li:last-child,
-    .quotes li:last-child{border-bottom:none}
-    .tick{color:#2e7d32;font-weight:700}
-    .q{color:var(--naranja);font-weight:900;font-size:18px;line-height:1}
-    .sectorBadge{
-      width:24px; flex:0 0 24px;
+    .checklist li:last-child{border-bottom:none}
+    .check{
+      color:#16a34a;
+      font-weight:900;
+      margin-top:1px;
+    }
+
+    .sectors{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .sectors li{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 0;
+      border-bottom:1px dashed #e8eef5;
+      color:#23313b;
+      font-size:14.5px;
+    }
+    .sectors li:last-child{border-bottom:none}
+    .ico{
+      width:18px;
       text-align:center;
     }
 
-    /* ===== Contacto (bloque final) ===== */
-    .contact{
-      background:#fbf1d4;
+    .quotes{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:6px;
+    }
+    .q{
+      background:#fbfdff;
+      border:1px solid #e8eef5;
+      border-radius:14px;
+      padding:12px 12px;
+      color:#23313b;
+      font-size:14.5px;
+    }
+    .q::before{
+      content:"“";
+      color:var(--naranja);
+      font-weight:900;
+      font-size:22px;
+      margin-right:6px;
+    }
+
+    /* Contacto */
+    .contactWrap{
+      margin-top:20px;
+      background:var(--beige);
+      border-radius:22px;
       border:3px dashed var(--azul2);
-      border-radius:20px;
-      padding:30px 22px;
+      padding:28px 18px;
       text-align:center;
-      margin:22px 0 24px;
+      box-shadow:var(--sombra);
     }
-    .contact h2{
-      margin:0 0 8px;
+    .contactWrap h2{
+      margin:0;
       font-size:44px;
+      letter-spacing:1px;
       color:var(--azul2);
-      letter-spacing:.6px;
+      font-weight:900;
     }
-    .contact p{
-      margin:0 0 14px;
-      font-size:18px;
-      color:#2b3944;
-    }
-    .contact .rows{
-      display:grid;
-      gap:8px;
-      justify-content:center;
-      margin:14px 0 18px;
-      color:#20303a;
-      font-size:20px;
+    .contactWrap p{
+      margin:6px 0 16px;
+      color:#25323b;
       font-weight:700;
     }
-    .contact .rows span{
-      font-weight:600;
-      color:#20303a;
-    }
-    .btns{
+    .contactLine{
       display:flex;
-      gap:14px;
+      align-items:center;
       justify-content:center;
+      gap:10px;
+      margin:8px 0;
+      color:#12212a;
+      font-weight:800;
+    }
+    .contactLine span{
+      font-weight:700;
+      color:#1c2a33;
+    }
+    .btnRow{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      margin-top:18px;
       flex-wrap:wrap;
-      margin-top:10px;
     }
     .btn{
       display:inline-block;
+      text-decoration:none;
       padding:14px 22px;
       border-radius:999px;
-      text-decoration:none;
-      font-weight:800;
-      border:2px solid transparent;
-      box-shadow:0 14px 28px rgba(0,0,0,.12);
-      font-size:18px;
+      font-weight:900;
+      border:0;
+      box-shadow:0 10px 22px rgba(0,0,0,.12);
+      transition:transform .15s ease;
     }
-    .btnW{background:var(--verde);color:#fff;}
-    .btnM{background:var(--azul2);color:#fff;}
+    .btn:hover{transform:translateY(-1px)}
+    .btnW{
+      background:var(--verde);
+      color:#fff;
+    }
+    .btnE{
+      background:var(--azul2);
+      color:#fff;
+    }
 
+    /* Footer */
     footer{
+      margin-top:22px;
       background:var(--azul);
       color:#fff;
       text-align:center;
-      padding:18px 12px;
-      border-radius:14px;
-      margin:0 0 28px;
-      box-shadow:0 14px 28px rgba(0,0,0,.12);
+      padding:18px 14px;
+      border-radius:18px;
+      box-shadow:var(--sombra);
     }
+    footer strong{font-weight:900}
 
-    /* WhatsApp flotante */
-    .whatsappFloat{
+    /* Floating WhatsApp */
+    .whatsapp{
       position:fixed;
       right:18px;
       bottom:18px;
       background:var(--verde);
       color:#fff;
-      padding:12px 18px;
+      padding:14px 18px;
       border-radius:999px;
       text-decoration:none;
-      font-weight:800;
-      box-shadow:0 16px 30px rgba(0,0,0,.20);
+      font-weight:900;
+      box-shadow:0 14px 26px rgba(0,0,0,.18);
       z-index:999;
     }
 
     /* Responsive */
-    @media (max-width: 980px){
-      header h1{font-size:34px}
-      .grid4{grid-template-columns:repeat(2, minmax(0,1fr))}
+    @media (max-width: 1020px){
+      header h1{font-size:38px}
+      .grid4{grid-template-columns:repeat(2, minmax(220px, 1fr))}
       .grid3{grid-template-columns:1fr}
-      .contact h2{font-size:34px}
-      .destacado{margin-left:18px;margin-right:18px}
+      .contactWrap h2{font-size:38px}
     }
-    @media (max-width: 520px){
-      header h1{font-size:28px}
+    @media (max-width: 560px){
+      header h1{font-size:32px}
+      h2.sectionTitle{font-size:28px}
+      .destacado h2{font-size:24px}
       .grid4{grid-template-columns:1fr}
-      .destacado h2{font-size:22px}
-      .sectionTitle{font-size:24px}
-      .contact h2{font-size:28px}
+      .contactWrap h2{font-size:34px}
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ===== PUNTO 1 ===== -->
   <header>
-    <div class="logoBox">
-      <!-- Cambia el archivo logo.png por tu nuevo logo YGM (mismo nombre) -->
-      <img src="logo.png" alt="Logo" />
+    <div class="logoWrap">
+      <!-- Mantiene tu logo actual. Luego lo cambiamos por el nuevo YGM cuando quieras -->
+      <img class="logo" src="logo.png" alt="Logo" />
     </div>
 
     <h1>YGM Consultoría en SST</h1>
     <p class="sub">Consultoría en Seguridad y Salud en el Trabajo – Ley 29783</p>
-    <p class="line">Lic. Yvan Gallo Mendoza</p>
+    <p class="sub3">Lic. Yvan Gallo Mendoza</p>
   </header>
 
-  <main class="wrap">
+  <main class="container">
 
-    <div class="destacado">
+    <!-- PUNTO 1 -->
+    <section class="destacado">
       <h2>¿Por qué SUNAFIL sanciona a las empresas?</h2>
       <ul>
         <li>SGSST implementado solo en documentos, sin evidencia en campo</li>
@@ -341,152 +405,157 @@
         <li>Capacitaciones sin evaluación ni registros verificables</li>
         <li>Acciones correctivas registradas pero no cerradas</li>
       </ul>
-      <div class="bold">YGM Consultoría en SST trabaja estos puntos desde la raíz.</div>
-    </div>
+      <div class="nota">YGM Consultoría en SST trabaja estos puntos desde la raíz.</div>
+    </section>
 
+    <!-- PUNTO 2 -->
     <section>
-      <div class="sectionCard">
-        <h2 class="sectionTitle">Nuestro Enfoque Profesional</h2>
-        <p class="p">No implementamos documentos para cumplir. <b>Implementamos controles</b> para prevenir accidentes, enfermedades ocupacionales y sanciones.</p>
-        <p class="p muted">Alineamos el SGSST a la operación real del negocio, con verificación en campo, indicadores útiles y mejora continua.</p>
+      <h2 class="sectionTitle">Nuestro Enfoque Profesional</h2>
+      <div class="card enfoque">
+        <p>
+          No implementamos documentos para cumplir.
+          <strong>Implementamos controles para prevenir accidentes, enfermedades ocupacionales y sanciones.</strong>
+        </p>
+        <p style="color:var(--muted)">
+          Alineamos el SGSST a la operación real del negocio, con verificación en campo, indicadores útiles y mejora continua.
+        </p>
       </div>
     </section>
 
-    <div class="sp"></div>
-
-    <!-- ===== PUNTO 2 ===== -->
+    <!-- PUNTO 3 -->
     <section>
       <h2 class="sectionTitle">¿Por qué elegir YGM Consultoría en SST?</h2>
       <div class="grid4">
-        <div class="miniCard">
-          <h4>Experiencia SUNAFIL</h4>
+        <div class="mini">
+          <h3>Experiencia SUNAFIL</h3>
           <p>Conocemos los criterios de fiscalización y cómo evitar observaciones y multas.</p>
         </div>
-        <div class="miniCard">
-          <h4>Resultados Comprobables</h4>
+        <div class="mini">
+          <h3>Resultados Comprobables</h3>
           <p>Menos sanciones, menos accidentes y mejor control del riesgo.</p>
         </div>
-        <div class="miniCard">
-          <h4>Servicio Personalizado</h4>
+        <div class="mini">
+          <h3>Servicio Personalizado</h3>
           <p>Soluciones adaptadas a tu rubro, tamaño y nivel de riesgo.</p>
         </div>
-        <div class="miniCard">
-          <h4>Prevención en Campo</h4>
+        <div class="mini">
+          <h3>Prevención en Campo</h3>
           <p>Verificamos lo que realmente se aplica, no solo lo que se documenta.</p>
         </div>
       </div>
     </section>
 
-    <div class="sp"></div>
-
-    <!-- ===== PUNTO 3 (A) ===== -->
+    <!-- Servicios (bloque que ya tenías) -->
     <section>
       <h2 class="sectionTitle">Servicios de Consultoría en SST</h2>
 
-      <div class="serviceList">
-        <div class="serviceItem">
-          <h3>Implementación y Actualización del SGSST</h3>
-          <p>Diseño, actualización y mantenimiento del SGSST conforme a la Ley 29783 y criterios SUNAFIL.</p>
+      <div class="card" style="padding:22px; display:flex; flex-direction:column; gap:18px;">
+        <div class="card" style="padding:22px; border-radius:16px; box-shadow:none;">
+          <h3 style="margin:0 0 8px; font-size:24px; font-weight:900;">Implementación y Actualización del SGSST</h3>
+          <p style="margin:0; color:var(--muted);">
+            Diseño, actualización y mantenimiento del SGSST conforme a la Ley 29783 y criterios SUNAFIL.
+          </p>
         </div>
 
-        <div class="serviceItem">
-          <h3>IPERC y Control de Riesgos Críticos</h3>
-          <p>Identificación de peligros, evaluación de riesgos y aplicación de la jerarquía de controles.</p>
+        <div class="card" style="padding:22px; border-radius:16px; box-shadow:none;">
+          <h3 style="margin:0 0 8px; font-size:24px; font-weight:900;">IPERC y Control de Riesgos Críticos</h3>
+          <p style="margin:0; color:var(--muted);">
+            Identificación de peligros, evaluación de riesgos y aplicación de la jerarquía de controles.
+          </p>
         </div>
 
-        <div class="serviceItem">
-          <h3>Auditorías Internas y Preparación SUNAFIL</h3>
-          <p>Auditorías documentales y operativas con planes de acción claros y priorizados.</p>
+        <div class="card" style="padding:22px; border-radius:16px; box-shadow:none;">
+          <h3 style="margin:0 0 8px; font-size:24px; font-weight:900;">Auditorías Internas y Preparación SUNAFIL</h3>
+          <p style="margin:0; color:var(--muted);">
+            Auditorías documentales y operativas con planes de acción claros y priorizados.
+          </p>
         </div>
       </div>
     </section>
 
-    <div class="sp"></div>
-
-    <!-- ===== PUNTO 4 ===== -->
+    <!-- PUNTO 4 (corregido redacción) -->
     <section>
       <h2 class="sectionTitle">Más que cumplir, generamos prevención real</h2>
 
       <div class="grid3">
 
-        <div class="panel">
-          <div class="panelHead">
-            <div class="icon">⚙️</div>
+        <div class="card colCard">
+          <div class="colHead">
+            <div class="badge">⚙️</div>
             <h3>Servicios Adicionales</h3>
           </div>
           <div class="underline"></div>
+
           <ul class="checklist">
-            <li><span class="tick">✓</span> Diagnóstico preventivo de SST (sin fiscalización)</li>
-            <li><span class="tick">✓</span> Acompañamiento en inspecciones SUNAFIL</li>
-            <li><span class="tick">✓</span> Investigación de accidentes e incidentes</li>
-            <li><span class="tick">✓</span> Elaboración de IPERC específicos y por tarea</li>
-            <li><span class="tick">✓</span> Capacitación aplicada (con evidencia)</li>
-            <li><span class="tick">✓</span> Indicadores de gestión y mejora continua</li>
-            <li><span class="tick">✓</span> Asesoría a gerencia y supervisores</li>
+            <li><span class="check">✓</span><span>Diagnóstico preventivo de SST (enfoque de control, no “simulación”)</span></li>
+            <li><span class="check">✓</span><span>Acompañamiento en inspecciones SUNAFIL (evidencias y sustento)</span></li>
+            <li><span class="check">✓</span><span>Investigación de accidentes e incidentes (causa raíz y plan de acción)</span></li>
+            <li><span class="check">✓</span><span>IPERC específicos por tarea y control de riesgos críticos</span></li>
+            <li><span class="check">✓</span><span>Capacitación aplicada (con evaluación y evidencia verificable)</span></li>
+            <li><span class="check">✓</span><span>Indicadores de gestión, seguimiento y mejora continua</span></li>
+            <li><span class="check">✓</span><span>Asesoría a gerencia y supervisores (liderazgo y disciplina operativa)</span></li>
           </ul>
         </div>
 
-        <div class="panel">
-          <div class="panelHead">
-            <div class="icon">🏗️</div>
+        <div class="card colCard">
+          <div class="colHead">
+            <div class="badge">🏢</div>
             <h3>Sectores Atendidos</h3>
           </div>
           <div class="underline"></div>
-          <ul class="sectorList">
-            <li><span class="sectorBadge">🏗️</span> Construcción</li>
-            <li><span class="sectorBadge">⛏️</span> Minería</li>
-            <li><span class="sectorBadge">🏭</span> Industria y manufactura</li>
-            <li><span class="sectorBadge">🏨</span> Hoteles y servicios</li>
-            <li><span class="sectorBadge">🏢</span> Oficinas administrativas</li>
-            <li><span class="sectorBadge">🚚</span> Transporte y logística</li>
-            <li><span class="sectorBadge">🏥</span> Salud y educación</li>
-            <li><span class="sectorBadge">🏪</span> MYPES y PYMES</li>
+
+          <ul class="sectors">
+            <li><span class="ico">🏗️</span><span>Construcción</span></li>
+            <li><span class="ico">⛏️</span><span>Minería</span></li>
+            <li><span class="ico">🏭</span><span>Industria y manufactura</span></li>
+            <li><span class="ico">🏨</span><span>Hoteles y servicios</span></li>
+            <li><span class="ico">🏢</span><span>Oficinas administrativas</span></li>
+            <li><span class="ico">🚚</span><span>Transporte y logística</span></li>
+            <li><span class="ico">🏥</span><span>Salud y educación</span></li>
+            <li><span class="ico">🧩</span><span>MYPES y PYMES</span></li>
           </ul>
         </div>
 
-        <div class="panel">
-          <div class="panelHead">
-            <div class="icon">⭐</div>
+        <div class="card colCard">
+          <div class="colHead">
+            <div class="badge">⭐</div>
             <h3>Resultados / Testimonios</h3>
           </div>
           <div class="underline"></div>
-          <ul class="quotes">
-            <li><span class="q">“</span> Reducimos observaciones SUNAFIL en la primera inspección.</li>
-            <li><span class="q">“</span> Pasamos de cumplir en papel a controlar riesgos críticos.</li>
-            <li><span class="q">“</span> Hoy los supervisores lideran la seguridad.</li>
-            <li><span class="q">“</span> La SST dejó de ser <b>un gasto</b> y pasó a ser <b>prevención real</b>.</li>
-          </ul>
+
+          <div class="quotes">
+            <div class="q">Reducimos observaciones SUNAFIL desde la primera inspección, ordenando evidencias y cierres.</div>
+            <div class="q">Pasamos de “cumplir en papel” a controlar riesgos críticos en campo.</div>
+            <div class="q">Hoy los supervisores lideran seguridad con inspecciones planificadas y acciones cerradas.</div>
+            <div class="q">La SST dejó de verse como gasto: se volvió continuidad operativa y reputación.</div>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <div class="sp"></div>
-
-    <!-- Contacto (recomendado para cierre) -->
-    <section class="contact">
+    <!-- Contacto -->
+    <section class="contactWrap">
       <h2>CONTACTO PROFESIONAL</h2>
       <p>Solicita asesoría, diagnóstico o cotización en SST</p>
 
-      <div class="rows">
-        <div>📲 WhatsApp: <span>+51 943 893 037</span></div>
-        <div>✉️ <span>ygallo48@hotmail.com</span></div>
-        <div>✉️ <span>yvangallo20@gmail.com</span></div>
-      </div>
+      <div class="contactLine">📲 <span>WhatsApp:</span> +51 943 893 037</div>
+      <div class="contactLine">✉️ <span>ygallo48@hotmail.com</span></div>
+      <div class="contactLine">✉️ <span>yvangallo20@gmail.com</span></div>
 
-      <div class="btns">
+      <div class="btnRow">
         <a class="btn btnW" href="https://wa.me/51943893037" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-        <a class="btn btnM" href="mailto:yvangallo20@gmail.com">Enviar correo</a>
+        <a class="btn btnE" href="mailto:ygallo48@hotmail.com" target="_blank" rel="noopener">Enviar correo</a>
       </div>
     </section>
 
     <footer>
-      YGM Consultoría en SST (Ley 29783) | Lic. Yvan Gallo Mendoza
+      <strong>YGM Consultoría en SST</strong> – Consultoría en SST (Ley 29783) | Lic. Yvan Gallo Mendoza
     </footer>
 
   </main>
 
-  <a class="whatsappFloat" href="https://wa.me/51943893037" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="whatsapp" href="https://wa.me/51943893037" target="_blank" rel="noopener">WhatsApp</a>
 
 </body>
 </html>
