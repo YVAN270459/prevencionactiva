@@ -1,429 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YGM Consultoría en SST | Ley 29783</title>
-  <style>
-    :root{
-      --azul:#0b3c5d;
-      --azul2:#083149;
-      --gris:#f3f6f8;
-      --blanco:#ffffff;
-      --verde:#25D366;
-      --sombra: 0 10px 26px rgba(0,0,0,.10);
-      --borde: rgba(0,0,0,.08);
-      --radio: 18px;
-    }
+<meta charset="UTF-8">
+<title>YGM Consultoría en SST</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    *{box-sizing:border-box}
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      margin:0;
-      background:var(--gris);
-      color:#222;
-      line-height:1.5;
-    }
+<style>
+:root{
+  --azul:#0b3c5d;
+  --celeste:#eaf4fb;
+  --gris:#f4f6f8;
+  --verde:#25d366;
+}
 
-    /* ====== HEADER / HERO ====== */
-    header{
-      background: linear-gradient(0deg, var(--azul2), var(--azul));
-      color:#fff;
-      padding: 54px 20px 120px;
-      text-align:center;
-    }
-    .logoWrap{
-      display:inline-flex;
-      justify-content:center;
-      align-items:center;
-      background:#fff;
-      border-radius:14px;
-      padding:12px 18px;
-      box-shadow: var(--sombra);
-      margin-bottom:22px;
-      max-width: 560px;
-    }
-    .logo{
-      width: 320px;
-      height: auto;
-      display:block;
-    }
-    header h1{
-      margin: 6px 0 10px;
-      font-size: 44px;
-      letter-spacing: .5px;
-    }
-    header p{
-      margin: 6px 0;
-      font-size: 18px;
-      opacity:.95;
-    }
-    header .sub{
-      font-size: 17px;
-      opacity:.92;
-    }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  margin:0;
+  background:var(--gris);
+  color:#222;
+}
 
-    /* ====== LAYOUT ====== */
-    .container{
-      max-width: 1100px;
-      margin: -78px auto 0;
-      padding: 0 18px 40px;
-    }
-    section{
-      margin: 18px 0;
-    }
+/* HEADER */
+header{
+  background:var(--azul);
+  color:#fff;
+  text-align:center;
+  padding:50px 20px 70px;
+}
 
-    /* ====== CARDS ====== */
-    .card{
-      background: var(--blanco);
-      border-radius: var(--radio);
-      box-shadow: var(--sombra);
-      border: 1px solid var(--borde);
-      padding: 26px;
-    }
+.logo{
+  background:#fff;
+  display:inline-block;
+  padding:14px 18px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
 
-    .destacado{
-      background:#e8f1f7;
-      border-left: 6px solid var(--azul);
-      padding: 26px;
-      border-radius: var(--radio);
-      box-shadow: var(--sombra);
-    }
+.logo img{ max-width:320px; }
 
-    h2{
-      color: var(--azul);
-      margin: 0 0 14px;
-      font-size: 30px;
-    }
+header h1{ margin:10px 0; font-size:34px; }
+header p{ margin:8px 0; font-size:17px; }
 
-    h3{
-      margin: 0 0 10px;
-      color:#111;
-      font-size: 22px;
-    }
+/* SECCIONES */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
 
-    ul{
-      margin: 10px 0 0 20px;
-      padding: 0;
-    }
+.card{
+  background:#fff;
+  border-radius:14px;
+  padding:30px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  margin-bottom:30px;
+}
 
-    /* ====== GRID ====== */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
+.destacado{
+  background:var(--celeste);
+  border-left:6px solid var(--azul);
+}
 
-    .mini{
-      text-align:center;
-      padding: 20px 18px;
-    }
-    .mini h3{
-      color: var(--azul);
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-    .mini p{
-      margin:0;
-      font-size: 14.5px;
-      color:#333;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-    /* ====== SERVICES ====== */
-    .stack{
-      display:grid;
-      gap: 18px;
-    }
+.mini{
+  text-align:center;
+}
 
-    /* ====== PUNTO 4 GRID ====== */
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .tag{
-      display:inline-block;
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(11,60,93,.10);
-      color: var(--azul);
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .list-clean{
-      list-style: none;
-      margin: 10px 0 0;
-      padding: 0;
-    }
-    .list-clean li{
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(0,0,0,.06);
-    }
-    .list-clean li:last-child{
-      border-bottom:none;
-    }
+/* TITULOS */
+h2{ color:var(--azul); }
 
-    /* ====== CONTACTO ====== */
-    .contact{
-      background: #f8efcf;
-      border-radius: 24px;
-      border: 3px dashed rgba(11,60,93,.85);
-      padding: 34px 22px;
-      text-align:center;
-    }
-    .contact h2{
-      color: var(--azul);
-      font-size: 44px;
-      margin-bottom: 6px;
-      letter-spacing:.4px;
-    }
-    .contact p{
-      margin: 6px 0 16px;
-      font-size: 18px;
-    }
-    .contact .info{
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
-      align-items:center;
-      justify-content:center;
-      font-size: 20px;
-    }
-    .contact .info a{
-      color: #0b3c5d;
-      text-decoration:none;
-      font-weight:700;
-    }
-    .buttons{
-      display:flex;
-      gap: 16px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top: 22px;
-    }
-    .btn{
-      display:inline-block;
-      padding: 14px 22px;
-      border-radius: 999px;
-      color:#fff;
-      font-weight: 800;
-      text-decoration:none;
-      box-shadow: var(--sombra);
-      border: 0;
-      min-width: 210px;
-      text-align:center;
-    }
-    .btn-wa{ background: var(--verde); }
-    .btn-mail{ background: var(--azul); }
+/* FOOTER */
+footer{
+  background:var(--azul);
+  color:#fff;
+  text-align:center;
+  padding:25px;
+}
 
-    /* ====== FLOATING WHATSAPP ====== */
-    .whatsapp{
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      background: var(--verde);
-      color:#fff;
-      padding: 12px 18px;
-      border-radius: 999px;
-      text-decoration:none;
-      font-weight: 800;
-      box-shadow: var(--sombra);
-    }
-
-    /* ====== FOOTER ====== */
-    footer{
-      background: var(--azul);
-      color:#fff;
-      text-align:center;
-      padding: 22px 12px;
-      border-radius: 18px;
-      margin-top: 18px;
-    }
-
-    /* ====== RESPONSIVE ====== */
-    @media (max-width: 1000px){
-      .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .grid3{ grid-template-columns: 1fr; }
-      header h1{ font-size: 36px; }
-      .logo{ width: 280px; }
-    }
-    @media (max-width: 560px){
-      header{ padding: 40px 16px 100px; }
-      header h1{ font-size: 30px; }
-      header p{ font-size: 16px; }
-      .logo{ width: 240px; }
-      .contact h2{ font-size: 34px; }
-      .btn{ min-width: 240px; }
-    }
-  </style>
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:var(--verde);
+  color:#fff;
+  padding:15px 22px;
+  border-radius:50px;
+  font-weight:bold;
+  text-decoration:none;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <div class="logoWrap">
-      <!-- Reemplaza logo.png por el nombre real de tu archivo si cambia -->
-      <img src="logo.png" alt="YGM Consultoría en SST" class="logo">
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="YGM Consultoría en SST">
+  </div>
+  <h1>YGM Consultoría en SST</h1>
+  <p>Consultoría en Seguridad y Salud en el Trabajo – Ley 29783</p>
+  <p>Lic. Yvan Gallo Mendoza</p>
+</header>
+
+<!-- PUNTO 1 -->
+<section class="card destacado">
+  <h2>¿Por qué SUNAFIL sanciona a las empresas?</h2>
+  <ul>
+    <li>SGSST implementado solo en documentos, sin evidencia en campo</li>
+    <li>IPERC desactualizado o no alineado a los riesgos reales</li>
+    <li>Capacitaciones sin evaluación ni registros verificables</li>
+    <li>Acciones correctivas registradas pero no cerradas</li>
+  </ul>
+  <strong>YGM Consultoría en SST trabaja estos puntos desde la raíz.</strong>
+</section>
+
+<!-- PUNTO 2 -->
+<section class="card">
+  <h2>Nuestro Enfoque Profesional</h2>
+  <p><strong>No implementamos documentos para cumplir.</strong> Implementamos controles para prevenir accidentes, enfermedades ocupacionales y sanciones.</p>
+  <p>Alineamos el SGSST a la operación real del negocio, con verificación en campo, indicadores útiles y mejora continua.</p>
+</section>
+
+<!-- PUNTO 3 (OPCIÓN A) -->
+<section class="card">
+  <h2>¿Por qué elegir YGM Consultoría en SST?</h2>
+
+  <div class="grid">
+    <div class="card mini">
+      <h3>Experiencia SUNAFIL</h3>
+      <p>Conocemos los criterios de fiscalización y cómo evitar observaciones y multas.</p>
     </div>
 
-    <h1>PREVENCIÓN ACTIVA</h1>
-    <p><strong>Reducimos riesgos, evitamos sanciones SUNAFIL y fortalecemos la cultura preventiva</strong></p>
-    <p class="sub">Consultoría en Seguridad y Salud en el Trabajo – Ley 29783</p>
-    <p class="sub">Lic. Yvan Gallo Mendoza</p>
-  </header>
+    <div class="card mini">
+      <h3>Resultados Comprobables</h3>
+      <p>Menos sanciones, menos accidentes y mejor control del riesgo.</p>
+    </div>
 
-  <div class="container">
+    <div class="card mini">
+      <h3>Servicio Personalizado</h3>
+      <p>Soluciones adaptadas a tu rubro, tamaño y nivel de riesgo.</p>
+    </div>
 
-    <!-- PUNTO 1 -->
-    <section class="destacado">
-      <h2>¿Por qué SUNAFIL sanciona a las empresas?</h2>
-      <ul>
-        <li>SGSST implementado solo en documentos, sin evidencia en campo</li>
-        <li>IPERC desactualizado o no alineado a los riesgos reales</li>
-        <li>Capacitaciones sin evaluación ni registros verificables</li>
-        <li>Acciones correctivas registradas pero no cerradas</li>
-      </ul>
-      <p><strong>Prevención Activa trabaja estos puntos desde la raíz.</strong></p>
-    </section>
+    <div class="card mini">
+      <h3>Prevención en Campo</h3>
+      <p>Verificamos lo que realmente se aplica, no solo lo que se documenta.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- PUNTO 2 -->
-    <section class="card">
-      <h2>Nuestro Enfoque Profesional</h2>
-      <p>
-        No implementamos documentos para cumplir. <strong>Implementamos controles para prevenir accidentes,
-        enfermedades ocupacionales y sanciones.</strong>
-      </p>
-      <p>
-        Alineamos el SGSST a la operación real del negocio, con verificación en campo,
-        indicadores útiles y mejora continua.
-      </p>
-    </section>
+<!-- PUNTO 4 -->
+<section class="card">
+  <h2>Servicios de Consultoría en SST</h2>
 
-    <!-- PUNTO 3 -->
-    <section class="card">
-      <h2>¿Por qué elegir Prevención Activa?</h2>
-
-      <div class="grid">
-        <div class="card mini">
-          <h3>Experiencia SUNAFIL</h3>
-          <p>Conocemos criterios de fiscalización y dónde enfocarnos para evitar multas.</p>
-        </div>
-        <div class="card mini">
-          <h3>Resultados Comprobados</h3>
-          <p>Reducimos sanciones y mejoramos el control del riesgo crítico.</p>
-        </div>
-        <div class="card mini">
-          <h3>Servicio Personalizado</h3>
-          <p>Soluciones reales y aplicables a tu operación, no plantillas genéricas.</p>
-        </div>
-        <div class="card mini">
-          <h3>Prevención en Campo</h3>
-          <p>Vamos más allá del papel: verificación, seguimiento y cierre de acciones.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICIOS (ya existentes en tu web) -->
-    <section class="card">
-      <h2>Servicios de Consultoría en SST</h2>
-      <div class="stack">
-        <div class="card">
-          <h3>Implementación y Actualización del SGSST</h3>
-          <p>Diseño, actualización y mantenimiento del SGSST conforme a la Ley 29783 y criterios SUNAFIL.</p>
-        </div>
-
-        <div class="card">
-          <h3>IPERC y Control de Riesgos Críticos</h3>
-          <p>Identificación de peligros, evaluación de riesgos y aplicación de la jerarquía de controles.</p>
-        </div>
-
-        <div class="card">
-          <h3>Auditorías Internas y Preparación SUNAFIL</h3>
-          <p>Auditorías documentales y operativas con planes de acción claros y priorizados.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== -->
-    <!-- PUNTO 4 (NUEVO) -->
-    <!-- ===================== -->
-    <section class="card">
-      <h2>Punto 4: Alcance y valor agregado</h2>
-
-      <div class="grid3">
-        <!-- Servicios adicionales -->
-        <div class="card">
-          <span class="tag">Servicios adicionales</span>
-          <h3>Soporte integral</h3>
-          <ul class="list-clean">
-            <li>Capacitaciones SST (4 mín./año) con evidencia y evaluación</li>
-            <li>Inspecciones planeadas, checklists y seguimiento en campo</li>
-            <li>Investigación de incidentes/accidentes y plan de acción</li>
-            <li>Programas: EPP, emergencias, ergonomía, salud ocupacional</li>
-            <li>Indicadores (leading/lagging) y tableros de control</li>
-          </ul>
-        </div>
-
-        <!-- Sectores atendidos -->
-        <div class="card">
-          <span class="tag">Sectores atendidos</span>
-          <h3>Experiencia multisector</h3>
-          <ul class="list-clean">
-            <li>Industria / manufactura</li>
-            <li>Construcción</li>
-            <li>Minería</li>
-            <li>Servicios (oficinas / administración)</li>
-            <li>Hoteles y hospitalidad</li>
-            <li>Logística y transporte</li>
-          </ul>
-        </div>
-
-        <!-- Testimonios -->
-        <div class="card">
-          <span class="tag">Testimonios</span>
-          <h3>Resultados reales</h3>
-          <p style="margin:0 0 10px;">
-            Incluye testimonios cortos (1–2 líneas) para aumentar confianza.
-          </p>
-          <ul class="list-clean">
-            <li><strong>“Ordenamos el SGSST y pasamos la fiscalización sin observaciones críticas.”</strong></li>
-            <li><strong>“El IPERC quedó alineado a riesgos reales y mejoró la ejecución en campo.”</strong></li>
-            <li><strong>“Se cerraron acciones correctivas y mejoró el cumplimiento operativo.”</strong></li>
-          </ul>
-          <p style="margin:12px 0 0; font-size:13px; color:#444;">
-            *Cuando tengas nombres/empresas autorizadas, los reemplazamos.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="contact">
-      <h2>CONTACTO PROFESIONAL</h2>
-      <p>Solicita asesoría, diagnóstico o cotización en SST</p>
-
-      <div class="info">
-        <div>📱 WhatsApp: <a href="https://wa.me/51943893037" target="_blank" rel="noopener">+51 943 893 037</a></div>
-        <div>✉️ <a href="mailto:ygallo48@hotmail.com">ygallo48@hotmail.com</a></div>
-        <div>✉️ <a href="mailto:yvangallo20@gmail.com">yvangallo20@gmail.com</a></div>
-      </div>
-
-      <div class="buttons">
-        <a class="btn btn-wa" href="https://wa.me/51943893037" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-        <a class="btn btn-mail" href="mailto:ygallo48@hotmail.com?subject=Consulta%20SST%20-%20Ley%2029783">Enviar correo</a>
-      </div>
-    </section>
-
-    <footer>
-      <strong>Prevención Activa</strong> — Consultoría en SST | Lic. Yvan Gallo Mendoza
-    </footer>
-
+  <div class="card">
+    <h3>Implementación y Actualización del SGSST</h3>
+    <p>Diseño, actualización y mantenimiento del SGSST conforme a la Ley 29783 y criterios SUNAFIL.</p>
   </div>
 
-  <!-- WhatsApp flotante -->
-  <a class="whatsapp" href="https://wa.me/51943893037" target="_blank" rel="noopener">WhatsApp</a>
+  <div class="card">
+    <h3>IPERC y Control de Riesgos Críticos</h3>
+    <p>Identificación de peligros, evaluación de riesgos y aplicación de la jerarquía de controles.</p>
+  </div>
+
+  <div class="card">
+    <h3>Auditorías Internas y Preparación SUNAFIL</h3>
+    <p>Auditorías documentales y operativas con planes de acción claros y priorizados.</p>
+  </div>
+</section>
+
+<footer>
+  YGM Consultoría en SST – Lic. Yvan Gallo Mendoza
+</footer>
+
+<a class="whatsapp" href="https://wa.me/51943893037" target="_blank">WhatsApp</a>
 
 </body>
 </html>
